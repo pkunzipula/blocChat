@@ -3,35 +3,37 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body ng-controller="home">
     <ui-view></ui-view>
-    <h4>Hello, World???</h4>
+
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
     <!-- FireBase -->
     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
     <script>
       // Initialize Firebase
       var config = {
-        apiKey: "AIzaSyCqwhk-Mju8Ur9HyFbMNcmJhND9exoU4Xc",
-        authDomain: "bloc-chats-by-james.firebaseapp.com",
-        databaseURL: "https://bloc-chats-by-james.firebaseio.com",
-        projectId: "bloc-chats-by-james",
-        storageBucket: "",
-        messagingSenderId: "332419296293"
+        apiKey: "AIzaSyDT4qmwvI7iBQB8v24ce71xtg1FRXrksaA",
+        authDomain: "blocchat-682e7.firebaseapp.com",
+        databaseURL: "https://blocchat-682e7.firebaseio.com",
+        projectId: "blocchat-682e7",
+        storageBucket: "blocchat-682e7.appspot.com",
+        messagingSenderId: "337851043224"
       };
       firebase.initializeApp(config);
     </script>
     <!-- Application Files -->
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/HomeCtrl.js"></script>
-    <script src="/scripts/services/Room.js"></script>
+    <script src="scripts/app.js"></script>
+    <!-- AngularUI Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="scripts/controllers/HomeCtrl.js"></script>
+    <script src="scripts/controllers/ModalCtrl.js"></script>
+    <script src="scripts/services/Room.js"></script>
 </body>
 </html>
