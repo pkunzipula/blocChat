@@ -3,7 +3,7 @@
         var home = this;
         home.chatRoomArray = Room.all;
 
-        main.openNewRoomModal = function() {
+        home.openNewRoomModal = function() {
         	var modalInstance = $uibModal.open({
         		templateUrl: '/templates/new_room_modal.html',
         		controller: 'ModalCtrl',

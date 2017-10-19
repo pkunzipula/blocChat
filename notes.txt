@@ -1,0 +1,50 @@
+You have an uneeded controller in index.html
+
+Line 8
+
+<body ng-controller="home">
+
+I removed it. 
+
+
+________________________________________
+
+You also have a few random html and js 
+files scattered in your folders that do nothing. 
+I deleted them.
+
+__________________________________________
+
+In HomeCtrl.js you have the following code:
+
+```
+  main.openNewRoomModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: '/templates/new_room_modal.html',
+                controller: 'ModalCtrl',
+                controllerAs: 'modal'
+            });
+        };
+
+```
+
+You are referencing a non existant object named ```main```.
+
+I changed it to ```home```:
+
+```
+  home.openNewRoomModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: '/templates/new_room_modal.html',
+                controller: 'ModalCtrl',
+                controllerAs: 'modal'
+            });
+        };
+
+```
+
+_____________________
+
+
+When I clicked the "new room" button the template file "new_room_modal.html"
+is not found. I created it.
